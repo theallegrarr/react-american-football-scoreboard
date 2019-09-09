@@ -6,8 +6,8 @@ import BottomRow from "./BottomRow";
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
  
-  const [lionsScore, setLionsScore] = useState(35);
-  const [tigersScore, setTigersScore] = useState(35);
+  const [lionsScore, setLionsScore] = useState(0);
+  const [tigersScore, setTigersScore] = useState(0);
 
   const goal = (score) => {
     if(score===1)setLionsScore(lionsScore+3);
@@ -46,7 +46,7 @@ function App() {
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => touchDown(2) }>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={() => touchDown(2) }>Away Field Goal</button>
+          <button className="awayButtons__fieldGoal" onClick={() => goal(2) }>Away Field Goal</button>
         </div>
       </section>
     </div>
